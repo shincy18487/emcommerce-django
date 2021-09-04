@@ -22,6 +22,7 @@ from . import view
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',view.home,name='home'),
-    path('store/',include('store.urls'))
+    path('store/',include('store.urls')),
+    path('cart/',include('cart.urls'))
 
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
